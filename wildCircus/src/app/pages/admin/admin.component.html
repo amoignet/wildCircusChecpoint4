@@ -1,1 +1,8 @@
-<p>admin works!</p>
+<app-header></app-header>
+<h2>Customers reservations</h2>
+
+<div *ngFor="let user of users">
+  <ul>{{user.name}} </ul>
+  <ul>{{user.email}} </ul>
+  <button (click)="delete(user.id)" (click)="refresh()">Delete this reservation</button>
+</div>

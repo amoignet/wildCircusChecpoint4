@@ -1,1 +1,29 @@
-<p>reservation works!</p>
+
+<app-header></app-header>
+<h2>Reservation</h2>
+
+<form (submit)="myForm.valid && createReservation()" #myForm="ngForm" class="card-white text-center">
+
+<h2>Name :</h2>
+<input type="text" [(ngModel)]="user.name" name="name" #nameRef=ngModel required>
+<div *ngIf="nameRef?.errors?.required && myForm.submitted">the Name field is required</div>
+
+<h2>Email :</h2>
+<input type="email" [(ngModel)]="user.email" name="email" #emailRef=ngModel required>
+<div *ngIf="emailRef?.errors?.required && myForm.submitted">the Email field is required</div>
+
+<h2>Date :</h2>
+<input type="date" value="2020-01-31" min="2020-01-01" max="2020-12-31" [(ngModel)]="ticket.date" name="date" #dateRef=ngModel required>
+<div *ngIf="dateRef?.errors?.required && myForm.submitted">the date field is required</div>
+
+<h2>Number of tickets :</h2>
+<input type="number"   min="1" max="100" [(ngModel)]="ticket.number" name="number" #numberRef=ngModel required>
+<div *ngIf="numberRef?.errors?.required && myForm.submitted">the Number of tickets field is required</div>
+
+  <button type="submit">Ajouter</button>
+
+</form>
+
+
+
+

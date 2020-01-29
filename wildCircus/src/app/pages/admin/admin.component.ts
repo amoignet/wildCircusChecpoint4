@@ -1,4 +1,6 @@
+import { UserClass } from './../../shared/models/user-class';
 import { Component, OnInit } from '@angular/core';
+import { ReservationService } from '../../shared/services/reservation.service';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  private users: UserClass[] = [];
+
+  constructor(private reservationService: ReservationService) { }
 
   ngOnInit() {
+    this.reservationService.getUsers()
+    .subscribe(response => this.users = response);
+  }
+
+  delete(id: number) {
+    this.reservationService.deleteAUser(id)
+    .subscribe(response => (this.users.splice(id, 1)));
+  }
+
+  refresh(): void {
+    window.location.reload();
   }
 
 }
