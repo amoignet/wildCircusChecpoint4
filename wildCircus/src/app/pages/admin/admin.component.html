@@ -3,6 +3,12 @@
 
 <div *ngFor="let user of users">
   <ul>{{user.name}} </ul>
-  <ul>{{user.email}} </ul>
+  <ul>{{user.email}}</ul>
   <button (click)="delete(user.id)" (click)="refresh()">Delete this reservation</button>
+</div>
+
+<div *ngFor="let ticket of tickets">
+  <ul>{{ticket.date}}</ul>
+  <ul>{{ticket.number}}</ul>
+  <button (click)="delete(ticket.id)" (click)="refresh()">Delete this reservation</button>
 </div>

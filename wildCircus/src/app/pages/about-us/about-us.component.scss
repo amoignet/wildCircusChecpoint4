@@ -1,0 +1,22 @@
+/* About us */
+h2 {
+  font-family: "Amatic SC";
+  color: #f1c40f;
+  font-weight: bold;
+  text-align: center;
+  font-size: 44px;
+}
+
+#AboutUs {
+  background-color: #e6e6fa;
+ }
+
+ .about_us {
+  display: flex;
+  flex-direction: row;
+ }
+
+ #group {
+  width: 35%;
+  height: auto;
+ }

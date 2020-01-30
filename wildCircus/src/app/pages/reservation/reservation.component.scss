@@ -1,0 +1,68 @@
+h2 {
+  font-family: "Amatic SC";
+  color: #f1c40f;
+  font-weight: bold;
+  text-align: center;
+  font-size: 44px;
+}
+
+//table
+table {
+  border-collapse: collapse;
+  width: 75%;
+  border: 1px solid gray;
+  margin: auto;
+  text-align: center;
+ }
+
+thead {
+ background-color: #baeedc;
+}
+
+td {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+//forms
+
+body {
+  background-color: rgb(230,230,230);
+  color: rgb(40,40,40);
+  font-weight: lighter;
+}
+
+  h2 {
+    text-align: center;
+  }
+
+.card-white {
+  background: white;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 700px;
+  margin: 24px auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+input {
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+button {
+  width: 30%;
+  margin-top: 30;
+  border-radius: 4px;
+  padding: 2%;
+  background-color: transparent;
+  margin:  20px auto 0 auto;
+ }

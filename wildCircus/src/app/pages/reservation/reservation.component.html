@@ -1,24 +1,61 @@
 
 <app-header></app-header>
+
+<h2>Prices</h2>
+
+<div class="card-white">
+
+  <table >
+    <thead>
+      <tr>
+        <td>Prices</td>
+        <td>Adults</td>
+        <td>Children under 12 years old</td>
+        <td>Groups (more than 10 people)</td>
+        <td>Schools</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Weekdays except wednesday</td>
+        <td>20€/pers.</td>
+        <td>10€/pers.</td>
+        <td>10€/pers.</td>
+        <td>8€/pers.</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Week-end and wednesday</td>
+        <td>25€/pers.</td>
+        <td>15€/pers.</td>
+        <td>15€/pers.</td>
+        <td>10€/pers.</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</div>
+
 <h2>Reservation</h2>
 
 <form (submit)="myForm.valid && createReservation()" #myForm="ngForm" class="card-white text-center">
 
-<h2>Name :</h2>
+<h3>Name :</h3>
 <input type="text" [(ngModel)]="user.name" name="name" #nameRef=ngModel required>
 <div *ngIf="nameRef?.errors?.required && myForm.submitted">the Name field is required</div>
 
-<h2>Email :</h2>
+<h3>Email :</h3>
 <input type="email" [(ngModel)]="user.email" name="email" #emailRef=ngModel required>
 <div *ngIf="emailRef?.errors?.required && myForm.submitted">the Email field is required</div>
 
-<h2>Date :</h2>
-<input type="date" value="2020-01-31" min="2020-01-01" max="2020-12-31" [(ngModel)]="ticket.date" name="date" #dateRef=ngModel required>
+<h3>Date :</h3>
+<input type="date" value="yyyy-mm--jj" min="2020-01-01" max="2020-12-31" [(ngModel)]="ticket.date" name="date" #dateRef=ngModel required>
 <div *ngIf="dateRef?.errors?.required && myForm.submitted">the date field is required</div>
 
-<h2>Number of tickets :</h2>
+<h3>Number of tickets :</h3>
 <input type="number"   min="1" max="100" [(ngModel)]="ticket.number" name="number" #numberRef=ngModel required>
-<div *ngIf="numberRef?.errors?.required && myForm.submitted">the Number of tickets field is required</div>
+<!-- <div *ngIf="numberRef?.errors?.required && myForm.submitted">the Number of tickets field is required</div> -->
 
   <button type="submit">Ajouter</button>
 
