@@ -4,7 +4,6 @@ import { ReservationService } from '../../shared/services/reservation.service';
 import { TicketService } from '../../shared/services/ticket.service';
 import { TicketClass } from '../../shared/models/ticket-class';
 
-
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -12,7 +11,9 @@ import { TicketClass } from '../../shared/models/ticket-class';
 })
 export class AdminComponent implements OnInit {
 
+  displayedColumns: string[] = ['name', 'email', 'date', 'nbreTicket', 'delete'];
   private users: UserClass[] = [];
+  dataSource = this.users;
   private tickets: TicketClass[] = [];
 
   constructor(private reservationService: ReservationService, private ticketService: TicketService) { }

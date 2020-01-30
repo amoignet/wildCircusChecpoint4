@@ -1,8 +1,11 @@
+import { ModalComponent } from './../../modal/modal.component';
 import { TicketClass } from './../../shared/models/ticket-class';
 import { TicketService } from './../../shared/services/ticket.service';
 import { UserClass } from './../../shared/models/user-class';
 import { Component, OnInit } from '@angular/core';
 import { ReservationService } from '../../shared/services/reservation.service';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-reservation',
@@ -14,15 +17,33 @@ export class ReservationComponent implements OnInit {
   user: UserClass;
   ticket: TicketClass;
 
-  constructor(private reservationService: ReservationService, private ticketService: TicketService) { }
+  constructor(private reservationService: ReservationService, private ticketService: TicketService, public matDialog: MatDialog) { }
 
   ngOnInit() {
     this.user = new UserClass();
-    // this.ticket = new TicketClass();
+    this.ticket = new TicketClass();
   }
 
   createReservation() {
-    this.reservationService.postAUser(this.user).subscribe(response => this.user = response);
-    // this.ticketService.postATicket(this.ticket).subscribe(response => this.ticket = response);
+    console.log(this.user);
+    this.reservationService.postAUser({
+      name: this.user.name,
+      email: this.user.email,
+      tickets: [
+        {
+          date: this.ticket.date,
+          nombreTickets: this.ticket.nombreTickets
+        }
+      ]
+    }).subscribe(response => this.user = response);
+  }
+
+  openModal() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.id = 'modal-component';
+    dialogConfig.height = '350px';
+    dialogConfig.width = '600px';
+    const modalDialog = this.matDialog.open(ModalComponent, dialogConfig);
   }
 }

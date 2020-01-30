@@ -10,6 +10,11 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { HeaderComponent } from './components/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalComponent as ModalComponent } from './modal/modal.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -18,15 +23,21 @@ import { HeaderComponent } from './components/header/header.component';
     AboutUsComponent,
     ReservationComponent,
     AdminComponent,
-    HeaderComponent
+    HeaderComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatTableModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalComponent]
 })
 export class AppModule { }

@@ -15,13 +15,16 @@ h2 {
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   width: 70%;
 }
+.tableWrapper {
+  width: 90%;
+  padding: 55px;
+  margin: 0 auto;
+}
 
 
-.userReservation {
-  text-align: center;
-  display: inline-flex;
-  border-radius: 4px;
 
+td {
+  width: 33%;
 }
 
 .trashIcon {
@@ -31,9 +34,5 @@ h2 {
   padding: 10px;
   }
 
-.cellule {
-  padding: 10px;
-  border: 1px solid grey;
-  }
 
 
