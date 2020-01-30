@@ -50,16 +50,18 @@
 <div *ngIf="emailRef?.errors?.required && myForm.submitted">the Email field is required</div>
 
 <h3>Date :</h3>
-<input type="date" value="yyyy-mm--jj" min="2020-01-01" max="2020-12-31" [(ngModel)]="ticket.date" name="date" #dateRef=ngModel required>
+<input type="date" value="yyyy-mm--jj" min="2020-01-01" max="2020-12-31" [(ngModel)]="user.date" name="date" #dateRef=ngModel required>
 <div *ngIf="dateRef?.errors?.required && myForm.submitted">the date field is required</div>
 
 <h3>Number of tickets :</h3>
-<input type="number"   min="1" max="100" [(ngModel)]="ticket.number" name="number" #numberRef=ngModel required>
-<!-- <div *ngIf="numberRef?.errors?.required && myForm.submitted">the Number of tickets field is required</div> -->
+<input type="number" [(ngModel)]="user.number" name="number" #numberRef=ngModel >
+<div *ngIf="numberRef?.errors?.required && myForm.submitted">the Number of tickets field is required</div>
 
   <button type="submit">Ajouter</button>
 
 </form>
+
+<button [routerLink]="['/admin']" routerLinkActive="router-link-active">ADMIN</button>
 
 
 

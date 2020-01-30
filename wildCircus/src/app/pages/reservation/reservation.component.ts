@@ -18,11 +18,11 @@ export class ReservationComponent implements OnInit {
 
   ngOnInit() {
     this.user = new UserClass();
-    this.ticket = new TicketClass();
+    // this.ticket = new TicketClass();
   }
 
   createReservation() {
     this.reservationService.postAUser(this.user).subscribe(response => this.user = response);
-    this.ticketService.postATicket(this.ticket).subscribe(response => this.ticket = response);
+    // this.ticketService.postATicket(this.ticket).subscribe(response => this.ticket = response);
   }
 }

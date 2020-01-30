@@ -1,14 +1,40 @@
 <app-header></app-header>
 <h2>Customers reservations</h2>
 
-<div *ngFor="let user of users">
-  <ul>{{user.name}} </ul>
-  <ul>{{user.email}}</ul>
-  <button (click)="delete(user.id)" (click)="refresh()">Delete this reservation</button>
+
+<div class="tableReservation">
+
+  <div *ngFor="let user of users" class="userReservation">
+
+    <div class="cellule">
+      <p>{{user.name}} </p>
+    </div>
+
+    <div class="cellule">
+      <p >{{user.email}}</p>
+    </div>
+
+    <div class="cellule">
+      <p>{{user.tickets[0].date}} </p>
+    </div>
+
+    <div class="cellule">
+      <p >{{user.tickets[0].nombreTickets}}</p>
+    </div>
+
+  
+    <img class="trashIcon" src="https://icons-for-free.com/iconfiles/png/512/delete+remove+trash+trash+bin+trash+can+icon-1320073117929397588.png" alt="button delete"
+    (click)="delete(user.id)" (click)="refresh()">
+
+  </div>
+
 </div>
 
-<div *ngFor="let ticket of tickets">
-  <ul>{{ticket.date}}</ul>
-  <ul>{{ticket.number}}</ul>
+<!-- <div *ngFor="let ticket of tickets">
+  <p>{{ticket.date}}</p>
+  <p>{{ticket.number}}</p>
   <button (click)="delete(ticket.id)" (click)="refresh()">Delete this reservation</button>
-</div>
+</div> -->
+
+
+

@@ -20,15 +20,15 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
     this.reservationService.getUsers()
     .subscribe(response => this.users = response);
-    this.ticketService.getTicket()
-    .subscribe(data => this.tickets = data);
+    // this.ticketService.getTicket()
+    // .subscribe(data => this.tickets = data);
   }
 
   delete(id: number) {
     this.reservationService.deleteAUser(id)
     .subscribe(response => (this.users.splice(id, 1)));
-    this.ticketService.deleteATicket(id)
-    .subscribe(data => (this.tickets.splice(id, 1)));
+    // this.ticketService.deleteATicket(id)
+    // .subscribe(data => (this.tickets.splice(id, 1)));
   }
 
 

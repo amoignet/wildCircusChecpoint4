@@ -1,0 +1,39 @@
+h2 {
+  font-family: "Amatic SC";
+  font-weight: bold;
+  text-align: center;
+  font-size: 44px;
+}
+
+.tableReservation {
+  text-align: center;
+  flex-direction: column;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 70%;
+}
+
+
+.userReservation {
+  text-align: center;
+  display: inline-flex;
+  border-radius: 4px;
+
+}
+
+.trashIcon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  padding: 10px;
+  }
+
+.cellule {
+  padding: 10px;
+  border: 1px solid grey;
+  }
+
+
