@@ -54,7 +54,7 @@
 <div *ngIf="dateRef?.errors?.required && myForm.submitted">the date field is required</div>
 
 <h3>Number of tickets :</h3>
-<input type="number" [(ngModel)]="ticket.nombreTickets" name="number" #numberRef=ngModel >
+<input type="number" [(ngModel)]="ticket.nombreTickets" name="number" #numberRef=ngModel required>
 <div *ngIf="numberRef?.errors?.required && myForm.submitted">the Number of tickets field is required</div>
 
   <button type="submit" (click)="openModal()">Ajouter</button>

@@ -1,35 +1,6 @@
 <app-header></app-header>
 <h2>Customers reservations</h2>
 
-
-<!-- <div class="tableReservation">
-
-  <div *ngFor="let user of users" class="userReservation">
-
-    <div class="cellule">
-      <p>{{user.name}} </p>
-    </div>
-
-    <div class="cellule">
-      <p >{{user.email}}</p>
-    </div>
-
-    <div class="cellule">
-      <p>{{user.tickets[0].date}} </p>
-    </div>
-
-    <div class="cellule">
-      <p >{{user.tickets[0].nombreTickets}}</p>
-    </div>
-
-
-    <img class="trashIcon" src="https://icons-for-free.com/iconfiles/png/512/delete+remove+trash+trash+bin+trash+can+icon-1320073117929397588.png" alt="button delete"
-    (click)="delete(user.id)" (click)="refresh()">
-
-  </div>
-
-</div> -->
-
 <div class="tableWrapper">
   <table mat-table [dataSource]="users" class="mat-elevation-z8">
 
@@ -46,11 +17,11 @@
 
    <ng-container matColumnDef="date">
     <th mat-header-cell *matHeaderCellDef> Date </th>
-    <td mat-cell *matCellDef="let user"> {{user.tickets[0].date}} </td>
+    <td mat-cell *matCellDef="let user"> {{user.tickets[0].date | date: 'd MMMM , y'}} </td>
   </ng-container>
 
   <ng-container matColumnDef="nbreTicket">
-    <th mat-header-cell *matHeaderCellDef> Nbre tickets </th>
+    <th mat-header-cell *matHeaderCellDef> Nbr tickets </th>
     <td mat-cell *matCellDef="let user"> {{user.tickets[0].nombreTickets}} </td>
   </ng-container>
 

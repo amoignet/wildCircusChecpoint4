@@ -1,6 +1,5 @@
 import { ModalComponent } from './../../modal/modal.component';
 import { TicketClass } from './../../shared/models/ticket-class';
-import { TicketService } from './../../shared/services/ticket.service';
 import { UserClass } from './../../shared/models/user-class';
 import { Component, OnInit } from '@angular/core';
 import { ReservationService } from '../../shared/services/reservation.service';
@@ -17,7 +16,7 @@ export class ReservationComponent implements OnInit {
   user: UserClass;
   ticket: TicketClass;
 
-  constructor(private reservationService: ReservationService, private ticketService: TicketService, public matDialog: MatDialog) { }
+  constructor(private reservationService: ReservationService,  public matDialog: MatDialog) { }
 
   ngOnInit() {
     this.user = new UserClass();
