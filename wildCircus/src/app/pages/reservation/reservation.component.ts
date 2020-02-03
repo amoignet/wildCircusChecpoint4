@@ -41,8 +41,8 @@ export class ReservationComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.id = 'modal-component';
-    dialogConfig.height = '350px';
-    dialogConfig.width = '600px';
+    dialogConfig.height = '500px';
+    dialogConfig.width = '800px';
     const modalDialog = this.matDialog.open(ModalComponent, dialogConfig);
   }
 }
