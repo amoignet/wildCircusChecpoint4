@@ -44,8 +44,15 @@ nav a, h2 {
   font-family: "Amatic SC";
   font-size: 30px;
   text-decoration: none;
-  color: #f1c40f;
   font-weight: bold;
+}
+
+a {
+  color: #f1c40f;
+}
+
+a:hover {
+  color: rgb(82, 45, 99);
 }
 
 h2 {
@@ -57,15 +64,22 @@ h3 {
  text-transform: uppercase;
 }
 
-a:hover {
-  color: red;
-}
-
 button {
   background-color: white;
   color: #f1c40f;
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   margin-left: 95%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color:  rgb(82, 45, 99);
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-left: 95%;
+  margin-bottom: 10px;
   cursor: pointer;
 }
