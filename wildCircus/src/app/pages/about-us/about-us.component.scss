@@ -11,6 +11,11 @@ h2 {
   background-color: #e6e6fa;
  }
 
+ p {
+   padding: 100px;
+   font-size: 20px;
+ }
+
  .about_us {
   display: flex;
   flex-direction: row;
@@ -19,4 +24,8 @@ h2 {
  #group {
   width: 35%;
   height: auto;
+ }
+
+ .googleMap {
+   padding: 5%;
  }

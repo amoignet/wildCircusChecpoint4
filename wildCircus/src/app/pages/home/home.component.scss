@@ -30,12 +30,16 @@ li {
 }
 
 li img {
-  width: 250px;
+  width: 400px;
   height: auto;
 }
 
 li h3 {
   text-align: center;
+  font-family: "Amatic SC";
+  color: #f1c40f;
+  font-weight: bold;
+  font-size: 35px;
 }
 
 /* About us */
@@ -51,4 +55,10 @@ li h3 {
 #group {
   width: 35%;
   height: auto;
+}
+
+p {
+  font-size: 20px;
+    padding: 0 50px;
+
 }
